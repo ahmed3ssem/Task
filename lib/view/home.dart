@@ -5,8 +5,6 @@ import 'package:task/widget/item_widget.dart';
 import 'package:task/widget/listview_item.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-import '../main.dart';
-
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -32,19 +30,19 @@ class _HomeState extends State<Home> {
                   Center(
                     child: Image.asset('assets/images/logo.png' , width: 90, height: 50,),
                   ),
-                 SizedBox(width: 100,),
-                 Icon(Icons.notifications_none_outlined , size: 35,color: Colors.white,),
+                 const SizedBox(width: 100,),
+                 const Icon(Icons.notifications_none_outlined , size: 35,color: Colors.white,),
                 ],
               ),
             ),
-            Divider(color: Color(0xFF0FA59A),thickness: 3,),
+            const Divider(color: Color(0xFF0FA59A),thickness: 3,),
             const SizedBox(height: 10,),
             const ItemWidget(),
             const SizedBox(height: 20,),
             Expanded(child: Container(
               padding: const EdgeInsets.all(10),
               decoration: const BoxDecoration(
-                color: const Color(0xFFE9EBEF),
+                color:  Color(0xFFE9EBEF),
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
               margin: const EdgeInsets.only(right: 10 , left: 10),

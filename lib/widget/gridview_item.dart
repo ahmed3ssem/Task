@@ -5,7 +5,7 @@ class GridViewItem extends StatefulWidget {
   String image;
 
 
-  GridViewItem(this.image);
+  GridViewItem(this.image, {Key? key}) : super(key: key);
 
   @override
   _GridViewItemState createState() => _GridViewItemState();
@@ -35,9 +35,9 @@ class _GridViewItemState extends State<GridViewItem> {
                     child:  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('kal'.tr().toString(), style: TextStyle(color: Color(0xFF38B3AA)),),
+                        Text('kal'.tr().toString(), style: const TextStyle(color: Color(0xFF38B3AA)),),
                         const SizedBox(width: 5,),
-                        Text('kalNum'.tr().toString(), style: TextStyle(color: Color(0xFF38B3AA))),
+                        Text('kalNum'.tr().toString(), style: const TextStyle(color: Color(0xFF38B3AA))),
                         const SizedBox(width: 5,),
                         const Image(image: AssetImage('assets/images/Path.png')),
                       ],
@@ -47,22 +47,22 @@ class _GridViewItemState extends State<GridViewItem> {
               ],
             ),
           ),
-          SizedBox(height: 5,),
+          const SizedBox(height: 5,),
           Center(
             child: Image.asset(widget.image),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Center(
-            child: Text('productName'.tr().toString() , style: TextStyle(fontSize: 16),),
+            child: Text('productName'.tr().toString() , style: const TextStyle(fontSize: 16),),
           ),
-          SizedBox(height: 5,),
+          const SizedBox(height: 5,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children:  [
 
-              Text('quantity'.tr().toString() , style: TextStyle(fontSize: 15)),
+              Text('quantity'.tr().toString() , style: const TextStyle(fontSize: 15)),
               const SizedBox(width: 10,),
-              const Text('5' , style: TextStyle(fontSize: 15 , color: Color(0xFF0FA59A)),),
+              const Text('5' , style: TextStyle(fontWeight: FontWeight.bold , fontSize: 17 , color: Color(0xFF0FA59A)),),
             ],
           ),
           const SizedBox(height: 5,),
