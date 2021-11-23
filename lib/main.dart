@@ -11,6 +11,7 @@ void main() async{
     saveLocale: true,
     supportedLocales: const [
       Locale('ar','AR'),
+      Locale('en','EN'),
     ],
   ));
 }
@@ -22,9 +23,7 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       localizationsDelegates: context.localizationDelegates,
-      supportedLocales:  [
-        Locale("en", "EN"), // OR Locale('ar', 'AE') OR Other RTL locales
-    ],
+      supportedLocales: context.supportedLocales,
       locale: context.locale,
       home:  const Home(),
     );

@@ -1,9 +1,9 @@
 {
-  "studentName": "اسم الطالب",
-  "all": "الكل",
-  "drinks": "مشروبات",
-  "productName": "عصير تفاح 250مل",
-  "currency": "ريال",
+  "studentName": "Student Name",
+  "all": "All",
+  "drinks": "Drinks",
+  "productName": "Apple drink 250ml",
+  "currency": "Riyal",
   "price": "7.5",
   "kal": "200 Kal"
 }

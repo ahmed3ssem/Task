@@ -28,6 +28,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   easy_localization: ^3.0.0
+  get: ^4.3.8
   flutter:
     sdk: flutter
 
@@ -68,6 +69,14 @@ flutter:
     - assets/images/sandwitch.png
     - assets/images/pizza.png
     - assets/images/tabletPhoto.png
+    - assets/images/Graybackground.png
+    - assets/images/search .png
+    - assets/images/Path.png
+    - assets/images/icon.png
+    - assets/images/logo.png
+    - assets/images/juice.png
+    - assets/images/cookies.png
+    - assets/images/cookiess.png
     - resources/ar-AR.json
     - resources/en-EN.json
   #   - images/a_dot_ham.jpeg

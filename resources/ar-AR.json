@@ -4,6 +4,8 @@
   "drinks": "مشروبات",
   "productName": "عصير تفاح 250مل",
   "currency": "ريال",
-  "price": "7.5",
-  "kal": "200 Kal"
+  "price": "7.50",
+  "kal": "Kcal",
+  "quantity": "الكمية بالمخزون",
+  "kalNum": "200"
 }

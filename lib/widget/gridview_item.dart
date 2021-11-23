@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class GridViewItem extends StatefulWidget {
-  const GridViewItem({Key? key}) : super(key: key);
+  String image;
+
+
+  GridViewItem(this.image);
 
   @override
   _GridViewItemState createState() => _GridViewItemState();
@@ -18,50 +21,66 @@ class _GridViewItemState extends State<GridViewItem> {
       elevation: 8,
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Card(
-                elevation: 5,
-                color: Colors.green,
-                child: Container(
-                  margin: const EdgeInsets.all(5),
-                  child:  Text('kal'.tr().toString()),
+          Container(
+            margin: const EdgeInsets.all(5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.asset('assets/images/icon.png'),
+                Card(
+                  elevation: 2,
+                  color: const Color(0xFFE8F8F7),
+                  child: Container(
+                    margin: const EdgeInsets.all(5),
+                    child:  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('kal'.tr().toString(), style: TextStyle(color: Color(0xFF38B3AA)),),
+                        const SizedBox(width: 5,),
+                        Text('kalNum'.tr().toString(), style: TextStyle(color: Color(0xFF38B3AA))),
+                        const SizedBox(width: 5,),
+                        const Image(image: AssetImage('assets/images/Path.png')),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-              const Icon(Icons.info , color: Colors.green,),
-            ],
+              ],
+            ),
           ),
+          SizedBox(height: 5,),
           Center(
-            child: Image.asset('assets/images/item.png', width: 70,height: 70,),
+            child: Image.asset(widget.image),
           ),
-           Center(
-            child: Text('productName'.tr().toString()),
+          SizedBox(height: 10,),
+          Center(
+            child: Text('productName'.tr().toString() , style: TextStyle(fontSize: 16),),
           ),
+          SizedBox(height: 5,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children:  [
-              const Text('5' , style: TextStyle(color: Colors.green),),
+
+              Text('quantity'.tr().toString() , style: TextStyle(fontSize: 15)),
               const SizedBox(width: 10,),
-              Text('quantity'.tr().toString()),
+              const Text('5' , style: TextStyle(fontSize: 15 , color: Color(0xFF0FA59A)),),
             ],
           ),
+          const SizedBox(height: 5,),
           Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text('currency'.tr().toString(), style: const TextStyle(color: Colors.green , fontWeight: FontWeight.bold , fontSize: 15)),
-              const SizedBox(width: 5,),
-              Text('price'.tr().toString(),style: const TextStyle(color: Colors.green)),
-              const SizedBox(width: 30,),
               Container(
                 margin: const EdgeInsets.only(right: 5 , left: 5),
                 decoration: const BoxDecoration(
-                    color: Colors.green,
+                    color: Color(0xFF0FA59A),
                     shape: BoxShape.circle
                 ),
                 child: const Icon(Icons.add , color: Colors.white,),
               ),
-
+              const SizedBox(width: 30,),
+              Text('price'.tr().toString(),style: const TextStyle( fontSize: 20, fontWeight: FontWeight.bold , color: Color(0xFF0FA59A))),
+              const SizedBox(width: 5,),
+              Text('currency'.tr().toString(), style: const TextStyle(color: Color(0xFF0FA59A) , fontWeight: FontWeight.bold , fontSize: 15)),
             ],
           )
         ],

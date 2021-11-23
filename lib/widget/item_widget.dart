@@ -13,20 +13,19 @@ class _ItemWidgetState extends State<ItemWidget> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const SizedBox(width: 10,),
-        Image.asset('assets/images/person.png'),
-        const SizedBox(width: 10,),
-        Image.asset('assets/images/search.png'),
         Container(
-          margin: const EdgeInsets.only(left: 15),
+          margin: const EdgeInsets.only(left: 10 , right: 10),
           height: 55,
-          width: 250,
+          width: 240,
+          decoration: const BoxDecoration(
+            color: Color(0xffFFFFFF),
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+          ),
           child:  TextField(
             textAlign: TextAlign.center,
-            keyboardType: TextInputType.emailAddress,
             decoration:  InputDecoration(
-              prefixIcon: const Icon(Icons.search),
-              label: Text('studentName'.tr().toString()),
+              suffixIcon: Image.asset('assets/images/search .png',),
+              label: Text('studentName'.tr().toString(),),
               enabledBorder:  const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 borderSide: BorderSide(color: Colors.grey),
@@ -38,6 +37,11 @@ class _ItemWidgetState extends State<ItemWidget> {
             ),
           ),
         ),
+        const SizedBox(width: 10,),
+        Image.asset('assets/images/search.png'),
+        const SizedBox(width: 10,),
+        Image.asset('assets/images/person.png'),
+
       ],
     );
   }
