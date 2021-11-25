@@ -78,6 +78,11 @@ flutter:
     - assets/images/juice.png
     - assets/images/cookies.png
     - assets/images/cookiess.png
+    - assets/images/cart.png
+    - assets/images/home.png
+    - assets/images/more.png
+    - assets/images/sales.png
+    - assets/images/wallet.png
     - resources/ar-AR.json
     - resources/en-EN.json
   #   - images/a_dot_ham.jpeg

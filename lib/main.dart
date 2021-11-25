@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/view/bottomnavigationbarscreen.dart';
 import 'package:task/view/home.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:task/view/home_tab_view.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget{
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: Home(),
+      home: BottomNavigationBarScreen(),
     );
   }
 
