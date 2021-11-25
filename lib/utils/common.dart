@@ -1,0 +1,4 @@
+class Common{
+
+  static List<String> images = ['assets/images/item.png','assets/images/juice.png', 'assets/images/cookies.png','assets/images/cookiess.png','assets/images/item.png' , 'assets/images/item.png','assets/images/item.png','assets/images/juice.png', 'assets/images/cookies.png','assets/images/cookiess.png','assets/images/item.png' , 'assets/images/item.png','assets/images/item.png','assets/images/juice.png', 'assets/images/cookies.png','assets/images/cookiess.png','assets/images/item.png' , 'assets/images/item.png','assets/images/item.png','assets/images/juice.png', 'assets/images/cookies.png','assets/images/cookiess.png','assets/images/item.png' , 'assets/images/item.png'];
+}

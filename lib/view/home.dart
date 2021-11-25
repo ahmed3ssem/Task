@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
+import 'package:task/utils/common.dart';
+import 'package:task/view/home_tab_view.dart';
 import 'package:task/view/second_design.dart';
 import 'package:task/widget/gridview_item.dart';
 import 'package:task/widget/item_widget.dart';
@@ -13,11 +16,21 @@ class Home extends StatefulWidget {
 }
 class _HomeState extends State<Home> {
 
-  List<String> images = ['assets/images/item.png','assets/images/juice.png', 'assets/images/cookies.png','assets/images/cookiess.png','assets/images/item.png' , 'assets/images/item.png'];
+
+  var shortestSide;
+  bool useMobileLayout = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: Device.get().isTablet ? HomeTabletView() :
+      Container(
         color: const Color(0xFF245550),
         child: ListView(
           children: [
@@ -87,7 +100,7 @@ class _HomeState extends State<Home> {
                       shrinkWrap: true,
                       physics: const ScrollPhysics(),
                       children: List.generate(6 , (index){
-                        return GridViewItem(images[index]);
+                        return GridViewItem(Common.images[index]);
                       })
                   )
                 ],
